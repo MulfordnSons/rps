@@ -11,25 +11,23 @@ function playRound (cpuChoice, playerChoice) {
     if (cpuChoice == playerChoice) {
         console.log('DRAW')
     } else if (cpuChoice == 'rock') {
-        if (playerChoice == 'paper') {
-            console.log('PAPER BEATS ROCK')
-        }
-        else if (playerChoice == 'scissors') {
-            console.log('ROCK BEATS SCISSORS')
+        if (playerChoice == 'scissors') {
+            console.log('SCISSORS BEATS ROCK')
+        } else if (playerChoice == 'paper') {
+            console.log('ROCK BEATS PAPER')
         }
     } else if (cpuChoice == 'paper') {
-        if (playerChoice == 'rock') {
+        if (playerChoice == 'scissors') {
+            console.log('SCISSORS BEATS PAPER')
+        } else if (playerChoice == 'rock') {
             console.log('PAPER BEATS ROCK')
         }
-        else if (playerChoice == 'scissors') {
-            console.log('SCISSORS BEATS PAPER')
-        } else if (cpuChoice == 'scissors') {
+    } else if (cpuChoice == 'scissors') {
         if (playerChoice == 'rock') {
             console.log('ROCK BEATS SCISSORS')
         } else if (playerChoice == 'paper') {
             console.log('SCISSORS BEATS PAPER')
         }
-    }
     }
 }
 
