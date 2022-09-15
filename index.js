@@ -1,6 +1,6 @@
-userChoice = prompt('rock paper or scissors')
+let score = [0, 0]
 
-computerChoice = function getCpuChoice () {
+let computerChoice = function getCpuChoice () {
     let choices = ['rock', 'paper', 'scissors']
     let choice = choices[Math.floor(Math.random()*choices.length)];
     return choice
@@ -9,26 +9,34 @@ computerChoice = function getCpuChoice () {
 function playRound (cpuChoice, playerChoice) {
     console.log(cpuChoice, playerChoice)
     if (cpuChoice == playerChoice) {
-        return 'DRAW'
+        return 'draw'
     } else if (cpuChoice == 'rock') {
         if (playerChoice == 'scissors') {
-            return 'SCISSORS BEATS ROCK'
+            return 'cpu'
         } else if (playerChoice == 'paper') {
-            return 'ROCK BEATS PAPER'
+            return 'player'
         }
     } else if (cpuChoice == 'paper') {
         if (playerChoice == 'scissors') {
-            return 'SCISSORS BEATS PAPER'
+            return 'player'
         } else if (playerChoice == 'rock') {
-            return 'PAPER BEATS ROCK'
+            return 'cpu'
         }
     } else if (cpuChoice == 'scissors') {
         if (playerChoice == 'rock') {
-            return 'ROCK BEATS SCISSORS'
+            return 'player'
         } else if (playerChoice == 'paper') {
-            return 'SCISSORS BEATS PAPER'
+            return 'cpu'
         }
     }
 }
 
-console.log(playRound(computerChoice(), userChoice));
+function game () {
+    let userChoice = prompt('rock paper or scissors')
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(computerChoice(), userChoice.toLowerCase()))
+     }
+}
+
+game()
+// console.log(playRound(computerChoice(), userChoice));
