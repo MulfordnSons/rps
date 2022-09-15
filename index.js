@@ -32,7 +32,7 @@ function playRound (cpuChoice, playerChoice) {
 }
 
 function game () {
-    let userChoice = prompt('rock paper or scissors')
+    // let userChoice = prompt('rock paper or scissors')
     for (let i = 0; i < 5; i++) {
         console.log(playRound(computerChoice(), userChoice.toLowerCase()))
      }

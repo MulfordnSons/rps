@@ -7,6 +7,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0px;
 }
 
 .title-container {
@@ -22,7 +23,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    gap: 100px;
+    gap: 250px;
+    flex-wrap: wrap;
 }
 
 .choice-container button {
@@ -52,6 +54,10 @@ body {
     background-color: #005fa2;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
 
-
-
+.game-control-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
