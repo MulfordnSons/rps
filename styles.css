@@ -1,0 +1,25 @@
+body {
+    background-image: url('images/rps-background.png');
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title-container {
+    color: antiquewhite;
+    font-size: 75px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.choice-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.choice-img {
+    border-radius: 25%;
+}
