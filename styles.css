@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    font-family: Roboto;
 }
 
 .title-container {
@@ -18,4 +19,36 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+    gap: 100px;
 }
+
+.choice-container button {
+    padding: 50px;
+    border-radius: 25%;
+    font-size: 25px;
+    text-align: center;
+    transition-duration: 0.4s;
+    /* background-color: #005fa2; */
+    background-color: white;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+.choice-container button:hover {
+    background-color: #005fa2;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-color: white;
+    /* box-shadow: 0 9px #999; */
+}
+
+.choice-container button:active {
+    background-color: #005fa2;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+
+
+
