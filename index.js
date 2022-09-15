@@ -9,26 +9,26 @@ computerChoice = function getCpuChoice () {
 function playRound (cpuChoice, playerChoice) {
     console.log(cpuChoice, playerChoice)
     if (cpuChoice == playerChoice) {
-        console.log('DRAW')
+        return 'DRAW'
     } else if (cpuChoice == 'rock') {
         if (playerChoice == 'scissors') {
-            console.log('SCISSORS BEATS ROCK')
+            return 'SCISSORS BEATS ROCK'
         } else if (playerChoice == 'paper') {
-            console.log('ROCK BEATS PAPER')
+            return 'ROCK BEATS PAPER'
         }
     } else if (cpuChoice == 'paper') {
         if (playerChoice == 'scissors') {
-            console.log('SCISSORS BEATS PAPER')
+            return 'SCISSORS BEATS PAPER'
         } else if (playerChoice == 'rock') {
-            console.log('PAPER BEATS ROCK')
+            return 'PAPER BEATS ROCK'
         }
     } else if (cpuChoice == 'scissors') {
         if (playerChoice == 'rock') {
-            console.log('ROCK BEATS SCISSORS')
+            return 'ROCK BEATS SCISSORS'
         } else if (playerChoice == 'paper') {
-            console.log('SCISSORS BEATS PAPER')
+            return 'SCISSORS BEATS PAPER'
         }
     }
 }
 
-playRound(computerChoice(), userChoice);
+console.log(playRound(computerChoice(), userChoice));
