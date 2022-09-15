@@ -4,6 +4,9 @@ body {
     flex-direction: column;
     height: 100vh;
     font-family: Roboto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title-container {
