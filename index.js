@@ -57,6 +57,11 @@ startButton = document.getElementById('start-button');
 document.querySelectorAll('.button').forEach(item => {
     item.addEventListener('click', event => {
       console.log(`'button pressed ${item.textContent.toLowerCase()}'`)
+      round = playRound(computerChoice, item.textContent())
+      if (round == 'cpu') {
+        // insert the second value in array scores to div showing cpu score
+      }
+      
       // add logic of game here, play a round and after each round, update
       // the scores in the bottom right of screen. Also, check the scores and once
       // a score reaches 5, end the game and display the winner.
