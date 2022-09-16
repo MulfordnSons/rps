@@ -40,3 +40,8 @@ function game () {
 
 game()
 // console.log(playRound(computerChoice(), userChoice));
+
+function startGame() {
+    startButton = document.getElementById('start-button')
+    startButton
+}

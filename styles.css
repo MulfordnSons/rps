@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px;
+    gap: 10px;
 }
 
 .title-container {
@@ -17,6 +18,12 @@ body {
     align-items: center;
     justify-content: center;
     /* flex-direction: column; */
+}
+
+.instruction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title-div:hover {
