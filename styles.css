@@ -31,6 +31,14 @@ body {
     margin: 1px;
 }
 
+.winner-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    /* color: transparent; */
+}
+
 .choice-container {
     display: flex;
     align-items: center;

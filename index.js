@@ -39,10 +39,20 @@ function playRound (cpuChoice, playerChoice) {
 
 
 function checkScore(score) {
-    return score <= 5;
+    return score >= 5;
+}
+
+function endGame (array) {
+    if (array.some(checkScore)) {
+        console.log('game over')
+        document.getElementById('game-over-message').textContent = 'someone won!'
+    } else {
+        console.log('game still going')
+    }
 }
 
 
+// start game logic
 startButton = document.getElementById('start-button');
     startButton.addEventListener('click', function (e) {
         // enable choice buttons - game can now be played
@@ -54,6 +64,8 @@ startButton = document.getElementById('start-button');
         })
     })
 
+// driver of actual logic that is used to play the game, driven by button clicks of three
+// choices (r, p, s)
 document.querySelectorAll('.button').forEach(item => {
     item.addEventListener('click', event => {
       console.log(`'button pressed ${item.textContent.toLowerCase()}'`)
@@ -62,6 +74,9 @@ document.querySelectorAll('.button').forEach(item => {
         // insert the second value in array scores to div showing cpu score
         document.getElementById('player-score').textContent = scores[0]
         document.getElementById('cpu-score').textContent = scores[1]
+
+        // check if game is over
+        endGame(scores)
       })
 
       // add logic of game here, play a round and after each round, update
